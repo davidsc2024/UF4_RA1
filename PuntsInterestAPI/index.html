@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Puntos de Interes</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Mapa Puntos de Interés</h1>
+    <div id="map">idmap</div>
+
+    <div id="readcsv">idreadcsv</div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/mapa.js"></script> <!-- Archivo donde está la clase Mapa -->
+    <script src="js/csv.js"></script> <!-- Archivo donde está la clase Csv -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let mapa = new Mapa(); // Crear el objeto y mostrar el mapa
+        }); 
+    </script> -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarCSV();
+        });
+    </script> -->
+    <script>
+        let mapa = new Mapa(); // Crear el objeto y mostrar el mapa
+    </script>
+</body>
+</html>
