@@ -30,8 +30,22 @@ class Mapa {
     }
 
     // Actualiza la posición inicial del mapa
+    // Actualiza la posición inicial del mapa
     actualizarPosInitMapa(lat, lon) {
+        // Limpiar marcadores anteriores
+        this.#marcadores.clearLayers();
+
+        // Agregar nuevo marcador a la nueva posición
+        const marcador = L.marker([lat, lon])
+            .bindPopup('Nueva posición inicial')
+            .openPopup();
+
+        this.#marcadores.addLayer(marcador);
+
+        // Mover la vista del mapa a la nueva posición
+        this.#map.setView([lat, lon], 13);
     }
+
 
     // Muestra un punto en el mapa con una descripción
     mostrarPunto(lat, lon, desc = "") {
